@@ -42,6 +42,10 @@ let ORDERS = DATABASE.ORDERS;
 // ********************************* Generate DATA ********************************
 
 let generate = document.getElementById('generate');
+// Tự động gọi generateData khi trang web load
+document.addEventListener('DOMContentLoaded', function() {
+    generateData();
+});
 generate.addEventListener('click', generateData);
 
 function generateData() {
