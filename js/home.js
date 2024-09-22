@@ -1,4 +1,21 @@
 // ===================== COMMON DEFINE ==================== 
+
+
+
+// Tự động gọi generateData khi trang web load
+document.addEventListener('DOMContentLoaded', function() {
+    generateData();
+});
+
+function generateData() {
+    // read json file
+    $.getJSON("js/data.json", function (data) {
+        DATABASE.PRODUCTS = data.PRODUCTS;
+        localStorage.setItem('DATABASE', JSON.stringify(DATABASE));
+        
+    });
+}
+
 // Formatter VND
 const formatter = new Intl.NumberFormat('it-IT', {
     style: 'currency',
