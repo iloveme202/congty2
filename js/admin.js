@@ -53,7 +53,7 @@ function generateData() {
     $.getJSON("js/data.json", function (data) {
         DATABASE.PRODUCTS = data.PRODUCTS;
         localStorage.setItem('DATABASE', JSON.stringify(DATABASE));
-        location.reload();
+        
     });
 }
 
